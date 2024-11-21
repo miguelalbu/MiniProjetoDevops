@@ -1,0 +1,5 @@
+teste usuários 10-50-100
+
+python -m locust -f load_test.py --host=https://jsonplaceholder.typicode.com --users 10 --spawn-rate 10
+python -m locust -f load_test.py --host=https://jsonplaceholder.typicode.com --users 50 --spawn-rate 50
+python -m locust -f load_test.py --host=https://jsonplaceholder.typicode.com --users 100 --spawn-rate 100

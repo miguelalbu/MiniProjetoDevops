@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>API Fetch Example</title>
+  <title>API Fetch</title>
   <link rel="stylesheet" href="style.css">
+  <!-- Snippet do Plausible -->
+  <script defer data-domain="seu-dominio.com" src="https://plausible.io/js/script.js"></script>
 </head>
 <body>
 
@@ -13,23 +15,23 @@
     <button id="fetchButton">Fazer Requisição</button>
     
     <div id="responseContainer">
-      <!-- A resposta da API será exibida aqui -->
+      
     </div>
   </div>
 
   <script>
-    // Selecionando os elementos HTML
     const fetchButton = document.getElementById('fetchButton');
     const responseContainer = document.getElementById('responseContainer');
     
-    // Função para gerar um ID aleatório entre 1 e 200
     function gerarIdAleatorio() {
-      return Math.floor(Math.random() * 200) + 1; // Gera um número entre 1 e 200
+      return Math.floor(Math.random() * 200) + 1;
     }
 
-    // Função para fazer o fetch e exibir a resposta
     fetchButton.addEventListener('click', () => {
-      const id = gerarIdAleatorio(); // Gerar um ID aleatório
+      const id = gerarIdAleatorio();
+
+      
+      plausible("RequisicaoAPI", { props: { id: id } });
 
       fetch(`https://jsonplaceholder.typicode.com/todos/${id}`)
         .then(response => response.json())
