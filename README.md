@@ -52,3 +52,6 @@ Gráfico 50 requisições
 <img src="img/request_50.png" alt="Descrição da imagem" width="600">
 Gráfico 100 requisições
 <img src="img/request_100.png" alt="Descrição da imagem" width="600">
+
+As 10 Requisições a API deu um resultado imediato, dá para ver no gráfico, mas a partir de 50 requisições ele demorou
+alguns segundos para retornar o GET.
