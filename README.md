@@ -12,7 +12,7 @@
 
 ## 🚀 Objetivo do Projeto
 
-1. **Testar o Endpoint**: Realizar requisições GET ao endpoint `/todos/{id}` da API JSONPlaceholder.
+1. **Testar o Endpoint**: Realizar requisições GET ao endpoint `/todos/1` da API JSONPlaceholder.
 2. **Simular Carga**: Utilizar o Locust para simular diferentes cenários de tráfego, gerando usuários simultâneos e avaliando o tempo de resposta e a taxa de sucesso.
 3. **Monitoramento e Análise**: Observar como a API se comporta em cenários de carga variada, identificando limites e possíveis gargalos de desempenho.
 
@@ -44,4 +44,11 @@ class APIUser(HttpUser):
                 response.success()
             else:
                 response.failure(f"Status code: {response.status_code}")
+```
 
+Gráfico 10 requisições
+<img src="img/request_10.png" alt="Descrição da imagem" width="600">
+Gráfico 50 requisições
+<img src="img/request_50.png" alt="Descrição da imagem" width="600">
+Gráfico 100 requisições
+<img src="img/request_100.png" alt="Descrição da imagem" width="600">
